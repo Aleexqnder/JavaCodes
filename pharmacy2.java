@@ -2,12 +2,7 @@ import java.util.Scanner;
 
 public class pharmacy2 {
     public static void main (String args[]){
-     Scanner sc = new Scanner(System.in);
-     /*E5: Una farmacia desea un programa para que al ingresar el valor de compra pueda calcular lo siguiente: 
-        si el pago se efectúa al “contado” o en efectivo, calcular un descuento del 15%; pero si el pago es con
-        “tarjeta” se incrementa un recargo del 8% al valor de compra. Calcular y 
-        visualizar el descuento o recargo según sea el caso y el total a pagar de la compra. */
-   
+     try (Scanner sc = new Scanner(System.in)) {
         double ValorDePago;
         int Opcion = 0;
         double Descuento = 0;
@@ -46,6 +41,7 @@ public class pharmacy2 {
     }while (Opcion != 1 && Opcion !=2);
  
     System.out.println("Total a pagar: L." + TotalPago);
+    }
 }
   
     
