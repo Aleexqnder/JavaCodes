@@ -16,7 +16,10 @@ public class ProductoCongelado extends Producto {
 
     @Override
     public void mostrarInformacion() {
+        System.out.println("Producto Congelado:");
+        System.out.println();
         super.mostrarInformacion();
         System.out.println("Temperatura de mantenimiento recomendada: " + temperaturaMantenimientoRecomendada);
+        System.out.println();
     }
 }

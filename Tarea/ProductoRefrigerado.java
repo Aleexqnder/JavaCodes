@@ -3,10 +3,12 @@ public class ProductoRefrigerado extends Producto {
     private double temperaturaMantenimientoRecomendada;
 
     // Constructor sin argumentos
+ // Constructor sin argumentos
     public ProductoRefrigerado() {
-        super("", ""); // Puedes poner valores predeterminados aquí si lo deseas
-        this.codigoOrganismo = "";
+        super("FechaCaducidadPredeterminada", "NumeroLotePredeterminado");
+        this.codigoOrganismo = "CodigoOrganismoNoEspecificado";
         this.temperaturaMantenimientoRecomendada = 0.0;
+
     }
 
     public ProductoRefrigerado(String fechaCaducidad, String numeroLote, String codigoOrganismo, double temperaturaMantenimientoRecomendada) {
@@ -30,11 +32,13 @@ public class ProductoRefrigerado extends Producto {
     public void setTemperaturaMantenimientoRecomendada(double temperaturaMantenimientoRecomendada) {
         this.temperaturaMantenimientoRecomendada = temperaturaMantenimientoRecomendada;
     }
-
     @Override
     public void mostrarInformacion() {
+        System.out.println("Producto Refrigerado:");
+        System.out.println();
         super.mostrarInformacion();
-        System.out.println("Código del organismo: " + codigoOrganismo);
-        System.out.println("Temperatura de mantenimiento recomendada: " + temperaturaMantenimientoRecomendada);
+        System.out.println("Código del Organismo: " + codigoOrganismo);
+        System.out.println("Temperatura de Mantenimiento Recomendada: " + temperaturaMantenimientoRecomendada);
+        System.out.println();
     }
 }

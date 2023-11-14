@@ -3,8 +3,11 @@ public class ProductoFresco extends Producto {
     private String paisOrigen;
 
     // Constructor sin argumentos
+  // Constructor sin argumentos
     public ProductoFresco() {
-        super("", ""); // Puedes poner valores predeterminados aquí si lo deseas
+        super("FechaCaducidadPredeterminada", "NumeroLotePredeterminado");
+        this.fechaEnvasado = "FechaEnvasadoNoEspecificada";
+        this.paisOrigen = "PaisOrigenNoEspecificado";
     }
 
     public ProductoFresco(String fechaCaducidad, String numeroLote, String fechaEnvasado, String paisOrigen) {
@@ -31,8 +34,11 @@ public class ProductoFresco extends Producto {
 
     @Override
     public void mostrarInformacion() {
+        System.out.println("Producto Fresco:");
+        System.out.println();
         super.mostrarInformacion();
         System.out.println("Fecha de Envasado: " + fechaEnvasado);
         System.out.println("País de Origen: " + paisOrigen);
+         System.out.println();
     }
 }

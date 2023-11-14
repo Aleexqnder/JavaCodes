@@ -3,10 +3,11 @@ public class CongeladoPorNitrogeno extends ProductoCongelado {
     private double tiempoExposicionNitrogeno;
 
     // Constructor sin argumentos
-    public CongeladoPorNitrogeno() {
-        super("", "", 0.0); // Puedes poner valores predeterminados aquí si lo deseas
-        this.metodoCongelacion = "";
-        this.tiempoExposicionNitrogeno = 0.0;
+public CongeladoPorNitrogeno() {
+    super("FechaCaducidadPredeterminada", "NumeroLotePredeterminado", -196.0);
+    this.metodoCongelacion = "MetodoCongelacionNoEspecificado";
+    this.tiempoExposicionNitrogeno = 0.0;
+
     }
 
     public CongeladoPorNitrogeno(String fechaCaducidad, String numeroLote, double temperaturaMantenimientoRecomendada, String metodoCongelacion, double tiempoExposicionNitrogeno) {
@@ -33,8 +34,11 @@ public class CongeladoPorNitrogeno extends ProductoCongelado {
 
     @Override
     public void mostrarInformacion() {
+        System.out.println("Congelado Por Nitrógeno:");
+        System.out.println();
         super.mostrarInformacion();
-        System.out.println("Método de congelación: " + metodoCongelacion);
-        System.out.println("Tiempo de exposición al nitrógeno: " + tiempoExposicionNitrogeno);
+        System.out.println("Método de Congelación: " + metodoCongelacion);
+        System.out.println("Tiempo de Exposición al Nitrógeno: " + tiempoExposicionNitrogeno);
+        System.out.println();
     }
 }

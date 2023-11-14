@@ -2,10 +2,12 @@ public class CongeladoPorAgua extends ProductoCongelado {
     private double salinidadAguaCongelacion;
 
     // Constructor sin argumentos
-    public CongeladoPorAgua() {
-        super("", "", 0.0); // Puedes poner valores predeterminados aquí si lo deseas
-        this.salinidadAguaCongelacion = 0.0;
-    }
+   // Constructor sin argumentos
+public CongeladoPorAgua() {
+    super("FechaCaducidadPredeterminada", "NumeroLotePredeterminado", 0.0);
+    this.salinidadAguaCongelacion = 0.0;
+}
+
 
     public CongeladoPorAgua(String fechaCaducidad, String numeroLote, double temperaturaMantenimientoRecomendada, double salinidadAguaCongelacion) {
         super(fechaCaducidad, numeroLote, temperaturaMantenimientoRecomendada);
@@ -22,7 +24,11 @@ public class CongeladoPorAgua extends ProductoCongelado {
 
     @Override
     public void mostrarInformacion() {
+        System.out.println("Congelado Por Agua");
+        System.out.println();
         super.mostrarInformacion();
         System.out.println("Salinidad del agua de congelación: " + salinidadAguaCongelacion);
+        System.out.println();   
     }
+
 }
