@@ -17,9 +17,10 @@ public class ProductoCongelado extends Producto {
     @Override
     public void mostrarInformacion() {
         System.out.println("Producto Congelado:");
-        System.out.println();
-        super.mostrarInformacion();
-        System.out.println("Temperatura de mantenimiento recomendada: " + temperaturaMantenimientoRecomendada);
+        System.out.println("Fecha de Caducidad: " + getFechaCaducidad());
+        System.out.println("Numero de Lote: " + getNumeroLote());
+        System.out.println("Temperatura de Mantenimiento Recomendada: " + temperaturaMantenimientoRecomendada);
+        System.out.println("Composición del Aire: 78% Nitrogen, 21% Oxygen, 1% Other gases");
         System.out.println();
     }
 }

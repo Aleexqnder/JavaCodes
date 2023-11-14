@@ -22,13 +22,15 @@ public CongeladoPorAgua() {
         this.salinidadAguaCongelacion = salinidadAguaCongelacion;
     }
 
-    @Override
-    public void mostrarInformacion() {
-        System.out.println("Congelado Por Agua");
-        System.out.println();
-        super.mostrarInformacion();
-        System.out.println("Salinidad del agua de congelación: " + salinidadAguaCongelacion);
-        System.out.println();   
+    public static void main(String[] args) {
+        System.out.println("Congelado Por Agua:");
+        CongeladoPorAgua productoCongeladoPorAgua = new CongeladoPorAgua();
+        // establecer los atributos del producto
+        productoCongeladoPorAgua.setFechaCaducidad("2022-12-31");
+        productoCongeladoPorAgua.setNumeroLote("L123");
+        productoCongeladoPorAgua.setSalinidadAguaCongelacion(0.9);
+        // mostrar la información del producto
+        productoCongeladoPorAgua.mostrarInformacion();
     }
 
 }

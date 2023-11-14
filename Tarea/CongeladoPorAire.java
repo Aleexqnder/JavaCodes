@@ -22,16 +22,12 @@ public class CongeladoPorAire extends ProductoCongelado {
 
     @Override
     public String toString() {
-        System.out.println("Congelado Por Aire:");
-        System.out.println();
-        String output = "CongeladoPorAire{" +
-                "composicionAire='" + composicionAire + '\'' +
-                ", fechaCaducidad='" + getFechaCaducidad() + '\'' +
-                ", numeroLote='" + getNumeroLote() + '\'' +
-                ", temperaturaMantenimientoRecomendada=" + getTemperaturaMantenimientoRecomendada() +
-                '}';
-        System.out.println(output);
-        System.out.println();
-        return output;
+        return "Congelado Por Aire:\n\n" +
+               "CongeladoPorAire{" +
+               "composicionAire='" + composicionAire + '\'' +
+               ", fechaCaducidad='" + getFechaCaducidad() + '\'' +
+               ", numeroLote='" + getNumeroLote() + '\'' +
+               ", temperaturaMantenimientoRecomendada=" + getTemperaturaMantenimientoRecomendada() +
+               "}\n";
     }
 }
