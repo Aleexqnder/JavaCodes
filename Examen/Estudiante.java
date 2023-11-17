@@ -18,18 +18,13 @@ public class Estudiante {
         this.calificaciones = new HashMap<>();
     }
 
+    public String getNombres() {
+        return this.nombres;
+    }
 
-        public String getNombres() {
-            return this.nombres;
-        }
-
-        public String getApellidos() {
-            return this.apellidos;
-        }
-
-
-        
-
+    public String getApellidos() {
+        return this.apellidos;
+    }
 
     public void agregarCalificacion(String materia, String parcial, List<Double> notas) {
         // Verificar si la materia ya existe en el mapa de calificaciones
@@ -43,25 +38,61 @@ public class Estudiante {
 
     public void mostrarInformacion() {
         System.out.println("Información del Estudiante:");
-        System.out.println("Nombres: " + nombres);
-        System.out.println("Apellidos: " + apellidos);
+        System.out.println("Nombre: " + nombres);
+        System.out.println("Apellido: " + apellidos);
         System.out.println("Identidad: " + identidad);
+
+        // Obtener información del curso y colegio
+        Curso curso = getCurso();
+        Colegio colegio = curso.getColegio();
+
+        System.out.println("Colegio: " + colegio.getNombre());
+        System.out.println("Año Lectivo: " + colegio.getAnioLectivo());
         System.out.println("Curso: " + curso.getNombre());
 
         System.out.println("Calificaciones:");
+
         for (Map.Entry<String, Map<String, List<Double>>> entry : calificaciones.entrySet()) {
             String materia = entry.getKey();
             Map<String, List<Double>> parciales = entry.getValue();
+
+            System.out.println(materia + ":");
 
             for (Map.Entry<String, List<Double>> parcialEntry : parciales.entrySet()) {
                 String parcial = parcialEntry.getKey();
                 List<Double> notas = parcialEntry.getValue();
 
-                System.out.println("   - " + materia + ", " + parcial + ": " + notas);
+                System.out.print(parcial + ": [");
+
+                for (int i = 0; i < notas.size(); i++) {
+                    System.out.print(notas.get(i));
+
+                    if (i < notas.size() - 1) {
+                        System.out.print(", ");
+                    }
+                }
+
+                System.out.println("]");
             }
+
+            double promedioMateria = calcularPromedioMateria(parciales);
+            System.out.println("Promedio " + materia + ": " + promedioMateria);
         }
     }
-    
+
+    private double calcularPromedioMateria(Map<String, List<Double>> parciales) {
+        double sum = 0;
+
+        for (List<Double> notas : parciales.values()) {
+            for (Double nota : notas) {
+                sum += nota;
+            }
+        }
+
+        int totalNotas = parciales.size() * parciales.values().iterator().next().size();
+        return sum / totalNotas;
+    }
+
     // Getter y Setter para la propiedad 'curso'
     public Curso getCurso() {
         return curso;
@@ -71,4 +102,3 @@ public class Estudiante {
         this.curso = curso;
     }
 }
-

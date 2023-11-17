@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-import java.util.InputMismatchException;
 
 public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         // Crear el colegio y agregar cursos
-        Colegio colegio = new Colegio("POO", 2023);
+        Colegio colegio = new Colegio("Aprendizaje de POO", 2023);
 
         String[] nombres = {"Juan", "María", "Carlos", "Ana", "José", "Carmen", "Francisco", "Isabel", "Manuel", "Teresa", "Luis", "Patricia", "Antonio", "Laura", "Javier", "Beatriz", "Felipe", "Rosa"};
         String[] apellidos = {"Pérez", "Rodríguez", "Gómez", "López", "Martínez", "Torres", "García", "Ramírez", "González", "Morales", "Guzmán", "Castro", "Ruiz", "Ortega", "Vargas", "Paredes", "Mendoza", "Zúñiga"};
@@ -19,7 +18,7 @@ public class Principal {
         // Agregar cursos hasta noveno grado con los nombres y apellidos proporcionados
         int index = 0;
         for (int i = 1; i <= 9; i++) {
-            Curso grado = new Curso("Grado " + i);
+            Curso grado = new Curso("Grado " + i, colegio);
 
             Estudiante estudiante1 = new Estudiante(nombres[index], apellidos[index], "ID" + (index + 1), grado);
             index++;
