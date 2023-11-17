@@ -1,14 +1,17 @@
-package Examen;
-
+package Examen.Ejercicio1;
+/*Prueba N2 – POO
+ 20211020997
+Jasson Alexander Suazo Molina
+ 1300 */
 import java.util.List;
 import java.util.ArrayList;
 
 public class Curso {
     private String nombreCurso;
     private List<Estudiante> estudiantes;
-    private Colegio colegio; // nuevo campo
+    private Colegio colegio; 
 
-    public Curso(String nombreCurso, Colegio colegio) { // modificado para aceptar un colegio
+    public Curso(String nombreCurso, Colegio colegio) { 
         this.nombreCurso = nombreCurso;
         this.estudiantes = new ArrayList<>();
         this.colegio = colegio; // asignar el colegio
@@ -31,7 +34,7 @@ public class Curso {
         return estudiantes;
     }
 
-    public Colegio getColegio() { // nuevo método
+    public Colegio getColegio() { 
         return colegio;
     }
 }

@@ -1,5 +1,8 @@
-package Examen;
-
+package Examen.Ejercicio1;
+/*Prueba N2 – POO
+ 20211020997
+Jasson Alexander Suazo Molina
+ 1300 */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -87,7 +90,7 @@ public class Principal {
                             opcionEstudiante = scanner.nextInt();
                         } catch (InputMismatchException e) {
                             System.out.println("Entrada inválida. Por favor, ingrese un número.");
-                            scanner.next(); // descarta la entrada incorrecta
+                            scanner.next(); 
                             continue;
                         }
 

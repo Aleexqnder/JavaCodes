@@ -1,8 +1,11 @@
-package Examen;
+package Examen.Ejercicio1;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
-
+/*Prueba N2 – POO
+ 20211020997
+Jasson Alexander Suazo Molina
+ 1300 */
 public class Estudiante {
     private String nombres;
     private String apellidos;
