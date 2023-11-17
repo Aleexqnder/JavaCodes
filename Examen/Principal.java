@@ -1,7 +1,10 @@
 package Examen;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.InputMismatchException;
+import java.util.InputMismatchException;
 
 public class Principal {
     public static void main(String[] args) {
@@ -20,9 +23,11 @@ public class Principal {
 
             Estudiante estudiante1 = new Estudiante(nombres[index], apellidos[index], "ID" + (index + 1), grado);
             index++;
+            agregarCalificacionesAleatorias(estudiante1);
 
             Estudiante estudiante2 = new Estudiante(nombres[index], apellidos[index], "ID" + (index + 1), grado);
             index++;
+            agregarCalificacionesAleatorias(estudiante2);
 
             grado.agregarEstudiante(estudiante1);
             grado.agregarEstudiante(estudiante2);
@@ -35,19 +40,32 @@ public class Principal {
 
         // Menú interactivo
         while (true) {
-            System.out.println("\nSeleccione el grado:");
+            System.out.println("\nSeleccione el grado (1-9):");
             List<Curso> cursos = colegio.getCursos();
             for (int i = 0; i < cursos.size(); i++) {
                 System.out.println((i + 1) + ". " + cursos.get(i).getNombre());
             }
-
+        
             System.out.print("Ingrese el número del grado (0 para salir): ");
-            int opcionGrado = scanner.nextInt();
-
+        
+            // Validar la entrada del usuario
+            int opcionGrado;
+            try {
+                opcionGrado = scanner.nextInt();
+                if (opcionGrado < 0 || opcionGrado > 9) {
+                    System.out.println("Por favor, ingrese un número válido entre 1 y 9.");
+                    continue; // Reinicia el bucle
+                }
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Por favor, ingrese un número válido.");
+                scanner.next(); // Limpiar el búfer del escáner para evitar un bucle infinito
+                continue; // Reinicia el bucle
+            }
+        
             if (opcionGrado == 0) {
                 break;
             }
-
+        
             Curso cursoSeleccionado = cursos.get(opcionGrado - 1);
 
             if (cursoSeleccionado != null) {
@@ -62,8 +80,22 @@ public class Principal {
                         }
                     }
 
-                    System.out.print("Ingrese el número del estudiante: ");
-                    int opcionEstudiante = scanner.nextInt();
+                    int opcionEstudiante = 0;
+
+                    do {
+                        System.out.print("Ingrese el número del estudiante: ");
+                        try {
+                            opcionEstudiante = scanner.nextInt();
+                        } catch (InputMismatchException e) {
+                            System.out.println("Entrada inválida. Por favor, ingrese un número.");
+                            scanner.next(); // descarta la entrada incorrecta
+                            continue;
+                        }
+
+                        if (opcionEstudiante < 1 || opcionEstudiante > estudiantes.size()) {
+                            System.out.println("Número de estudiante inválido. Por favor, intente de nuevo.");
+                        }
+                    } while (opcionEstudiante < 1 || opcionEstudiante > estudiantes.size());
 
                     Estudiante estudianteSeleccionado = estudiantes.get(opcionEstudiante - 1);
                     if (estudianteSeleccionado != null) {
@@ -81,4 +113,40 @@ public class Principal {
         } // Fin del while
         System.out.println("Programa finalizado.");
     } // Fin del método main
-} // Fin de la clase Principal
+
+    // Método para agregar calificaciones aleatorias a un estudiante
+    private static void agregarCalificacionesAleatorias(Estudiante estudiante) {
+        estudiante.agregarCalificacion("Español", "Parcial 1", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Español", "Parcial 2", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Español", "Parcial 3", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Español", "Parcial 4", generarNotasAleatorias());
+
+        estudiante.agregarCalificacion("Matemáticas", "Parcial 1", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Matemáticas", "Parcial 2", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Matemáticas", "Parcial 3", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Matemáticas", "Parcial 4", generarNotasAleatorias());
+
+        estudiante.agregarCalificacion("Sociales", "Parcial 1", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Sociales", "Parcial 2", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Sociales", "Parcial 3", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Sociales", "Parcial 4", generarNotasAleatorias());
+
+        estudiante.agregarCalificacion("Física", "Parcial 1", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Física", "Parcial 2", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Física", "Parcial 3", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Física", "Parcial 4", generarNotasAleatorias());
+
+        estudiante.agregarCalificacion("Química", "Parcial 1", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Química", "Parcial 2", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Química", "Parcial 3", generarNotasAleatorias());
+        estudiante.agregarCalificacion("Química", "Parcial 4", generarNotasAleatorias());
+    }
+
+    // Método para generar notas aleatorias (entre 0 y 100)
+    private static List<Double> generarNotasAleatorias() {
+        List<Double> notas = new ArrayList<>();
+        double nota = Math.round(Math.random() * 100); // Genera una sola nota aleatoria
+        notas.add(nota);
+        return notas;
+    }
+}

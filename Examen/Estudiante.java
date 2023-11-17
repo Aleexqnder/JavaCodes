@@ -28,6 +28,9 @@ public class Estudiante {
         }
 
 
+        
+
+
     public void agregarCalificacion(String materia, String parcial, List<Double> notas) {
         // Verificar si la materia ya existe en el mapa de calificaciones
         if (!calificaciones.containsKey(materia)) {
