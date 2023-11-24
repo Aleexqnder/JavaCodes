@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java determina si tres enteros distintos de cero podrían 
 ser los lados de un triángulo rectángulo.
 # Utiliza el teorema de Pitágoras para verificar la propiedad del triángulo rectángulo y muestra el resultado.

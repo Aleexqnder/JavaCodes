@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java permite al usuario elegir entre diferentes 
 figuras (círculo, cuadrado, triángulo, rectángulo y rombo),
 # solicita la información necesaria para calcular el área y el perímetro de la figura

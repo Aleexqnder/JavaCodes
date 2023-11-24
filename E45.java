@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java solicita al usuario ingresar dos números y calcula la potencia
 # del primer número elevado al segundo. Maneja casos de exponentes positivos, negativos o cero sin usar
 # la librería math.h. Se ha modificado utilizando funciones y ciclos para mejorar la estructura y legibilidad del código.

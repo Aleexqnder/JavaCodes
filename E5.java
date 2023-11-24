@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java solicita al usuario dos números enteros,
 # los compara y muestra cuál es el mayor. Si ambos son iguales, indica que los números
 # son iguales. Utiliza la clase Scanner para la entrada del usuario, estructuras de control

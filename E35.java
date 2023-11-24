@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java imprime una tabla de los equivalentes binario, octal y hexadecimal
 # de los números decimales en el rango de 1 a 256.
 # ---------------------------------------------------------

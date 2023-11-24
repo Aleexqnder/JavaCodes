@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java imprime un cuadro, un óvalo, una flecha y un diamante.
 # Utiliza bucles anidados para dibujar las figuras en la consola.
 # ---------------------------------------------------------

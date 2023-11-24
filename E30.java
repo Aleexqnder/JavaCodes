@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java utiliza un bucle for para encontrar el menor de varios enteros.
 # El usuario especifica el número de valores a comparar, y luego ingresa esos valores. El programa
 # identifica y muestra el menor de los valores ingresados.

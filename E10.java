@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java calcula el área y el perímetro de un cuadrado
 # basado en el lado proporcionado por el usuario. Utiliza variables de coma flotante para
 # precisión decimal y muestra las fórmulas utilizadas junto con los resultados obtenidos.

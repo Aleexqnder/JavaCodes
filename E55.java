@@ -2,10 +2,13 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
-# Análisis/Resumen: Este programa en Java implementa un juego de dados en el que el usuario comienza con un crédito de L. 1000.00.
-# El usuario realiza apuestas y tiene que adivinar la suma de dos dados lanzados. El programa muestra los dados, calcula la suma, 
-# dibuja los dados y proporciona retroalimentación sobre si el usuario ha ganado o perdido. El juego continúa hasta que el usuario
+# Código: 20211020997
+# Análisis/Resumen: Este programa en Java implementa un juego de dados en el que el
+ usuario comienza con un crédito de L. 1000.00.
+# El usuario realiza apuestas y tiene que adivinar la suma de dos dados lanzados. El
+ programa muestra los dados, calcula la suma, 
+# dibuja los dados y proporciona retroalimentación sobre si el usuario ha ganado o perdido. 
+El juego continúa hasta que el usuario
 # se queda sin dinero o decide retirarse después de al menos cinco jugadas sin perder todo su dinero.
 # ---------------------------------------------------------
 */

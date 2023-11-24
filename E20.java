@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java calcula los ingresos de los vendedores de una empresa química.
 # Utiliza un bucle while para recibir las ventas brutas de cada vendedor, calcula los ingresos basados
 # en el sueldo base más el 9% de las ventas brutas, y muestra los ingresos del vendedor.

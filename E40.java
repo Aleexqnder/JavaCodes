@@ -2,7 +2,7 @@
 # ---------------------------------------------------------
 # Nombre: Jasson Alexander Suazo Molina
 # Correo electrónico: jasson.suazo@unah.hn
-# Código: E1
+# Código: 20211020997
 # Análisis/Resumen: Este programa en Java solicita al usuario ingresar números enteros 
 no negativos hasta que se ingresa un número negativo.
 # Luego, imprime una tabla con los valores calculados según las fórmulas especificadas en el enunciado, 
